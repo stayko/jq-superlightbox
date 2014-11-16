@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<title>SuperLightBox v1.0 Test</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+		
+		<link href="styles.css" media="screen" rel="Stylesheet" type="text/css" />
+		<link href="jquery.superlightbox-styles-1.0.css" media="screen" rel="Stylesheet" type="text/css" />
+		
+		<script type="text/javascript" src="jquery-1.6.3.min.js" charset="utf-8"></script> 
+		<script type="text/javascript" src="jquery.superlightbox-1.0.js" charset="utf-8"></script> 
+
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				$('#activate1').click(function() {
+					
+					$('#lb_dark').superLightBox({
+						height: '300',
+						width: '200',
+						message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis dolor erat. Fusce pellentesque sollicitudin magna varius porttitor. In volutpat sapien in lorem dignissim sagittis. ', 
+						effect: 'dark' , 
+						onClose: function() {alert("Lightbox has been closed");}
+					}); 
+					
+				});
+				
+				$('#activate2').click(function() {
+					
+					$('#lb_light').superLightBox({
+						height: '200',
+						width: '300',
+						position: {top: 10, left: 400},
+						message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis dolor erat. Fusce pellentesque sollicitudin magna varius porttitor. In volutpat sapien in lorem dignissim sagittis. ', 
+						effect: 'light' , 
+						onClose: function() {alert("Lightbox2 has been closed");}
+					}); 
+					
+				});
+		
+			}); 
+			
+		</script>	
+		
+	</head>
+
+	<body>
+		<a href="#" id="activate1">SLB Dark</a>&nbsp;|&nbsp;
+		<a href="#" id="activate2">SLB Light</a>
+		<div id="lb_light"></div>
+		<div id="lb_dark"></div>
+	</body>
+	
+</html>

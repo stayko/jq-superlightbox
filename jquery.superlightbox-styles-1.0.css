@@ -1,0 +1,62 @@
+/*
+	jQuery SuperLightBox version 1.0 (a generic draggable lightbox overlay library)
+	Author: Stayko Chalakov
+	Date created: 13 September 2011
+	
+*/
+body 
+{ 
+	height:100%; 
+}
+.slb_container
+{
+	display: block; 
+	position: absolute; 
+	z-index: 99999; 
+	background-color: white; 
+	border: 1px solid #ccc; 
+	text-align: center; 
+	zoom: 1;
+}
+.slb_darkOverlay, .slb_lightOverlay
+{
+	height:100%;
+	width:100%;
+	display: block; 
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:99998;
+	opacity:0.7; 
+	filter: alpha(opacity = 70);
+
+}
+.slb_darkOverlay
+{
+	background-color: #000; 
+}
+.slb_lightOverlay
+{
+	background-color: #fff; 
+}
+.slb_close_btn
+{
+	position: absolute;
+	display: block; 
+	z-index: 100000; 
+	top: 10px;
+	right: 10px; 
+	width: 57px;
+	height: 12px; 
+	background: url('close_btn.gif') top left no-repeat; 
+}
+.slb_draggable
+{
+	cursor:move; 
+	display:block; 
+	height: 24px; 
+	position: absolute; 
+	z-index: 100001; 
+	top: 0;
+	left: 0; 
+}
